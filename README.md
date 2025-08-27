@@ -4,13 +4,15 @@ Welcome to my research repository at the **Saha Institute of Nuclear Physics (SI
 
 ## 🔹 Repository Structure
 
+```text
 hep_project/
 │
-├── code/    # Scripts, notebooks, and analysis pipelines
-├── data/    # Experimental/simulated datasets
-├── docs/    # Research notes, figures, and documentation
-├── env/     # Conda environment files (environment.yml)
+├── code/ # Scripts, notebooks, and analysis pipelines
+├── data/ # Experimental/simulated datasets
+├── docs/ # Research notes, figures, and documentation
+├── env/ # Conda environment files (environment.yml)
 └── README.md
+```
 
 
 ## 🔹 Research Focus
@@ -36,5 +38,35 @@ hep_project/
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
+```
+### 2. Setup Conda Environment
+```bash
 conda env create -f env/environment.yml
 conda activate research
+```
+### 3. Run Scripts / Notebooks
+```bash
+Python scripts: python code/script_name.py
+Jupyter notebooks: jupyter lab or jupyter notebook
+```
+### 4. Git Workflow
+```bash
+git pull --rebase origin main
+git add <files>
+git commit -m "Description"
+git push origin main
+```
+## 🔹 Dependencies
+
+- Python >= 3.10
+- numpy, scipy, pandas, matplotlib, seaborn, sympy
+- PyTorch, scikit-learn
+- JupyterLab / Notebook
+- SARAH, micrOMEGAs (for BSM modeling)
+
+## 🔹 License
+
+This repository is for research purposes. For collaboration inquiries, please contact: utkarsh.patel@example.com
+.
+
+Maintained by Utkarsh Patel — Research Associate at SINP, Kolkata
