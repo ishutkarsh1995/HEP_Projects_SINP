@@ -5,7 +5,7 @@ Welcome to my research repository at the **Saha Institute of Nuclear Physics (SI
 ## 🔹 Repository Structure
 
 ```text
-hep_project/
+HEP_Projects_SINP/
 │
 ├── code/ # Scripts, notebooks, and analysis pipelines
 ├── data/ # Experimental/simulated datasets
