@@ -6,10 +6,10 @@ Welcome to my research repository at the **Saha Institute of Nuclear Physics (SI
 
 hep_project/
 │
-├── code/ # Scripts, notebooks, and analysis pipelines
-├── data/ # Experimental/simulated datasets
-├── docs/ # Research notes, figures, and documentation
-├── env/ # Conda environment files (environment.yml)
+├── code/    # Scripts, notebooks, and analysis pipelines
+├── data/    # Experimental/simulated datasets
+├── docs/    # Research notes, figures, and documentation
+├── env/     # Conda environment files (environment.yml)
 └── README.md
 
 
