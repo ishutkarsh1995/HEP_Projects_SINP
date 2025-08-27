@@ -1,0 +1,89 @@
+===========================
+HEP Project Research Environment Cheat Sheet
+===========================
+
+1️⃣ Conda Environment Setup
+----------------------------
+# Create a new environment with Python 3.10
+conda create -n research python=3.10 -y
+
+# Activate environment
+conda activate research
+
+# Deactivate environment
+conda deactivate
+
+# List all conda environments
+conda env list
+
+# Install commonly used packages
+conda install -c conda-forge \
+numpy scipy pandas matplotlib seaborn sympy h5py numba cython multiprocess tqdm \
+jupyterlab notebook ipykernel nb_conda_kernels plotly bokeh holoviews astropy \
+uncertainties symengine requests python-dateutil pytz scikit-learn -y
+
+# Install PyTorch (CPU version)
+conda install pytorch torchvision torchaudio cpuonly -c pytorch -y
+# OR GPU version if CUDA available:
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
+
+# Check package imports
+python -c "import torch, numpy, scipy, pandas, matplotlib, sympy; print('All imports OK')"
+
+---
+
+2️⃣ VS Code Setup
+-----------------
+# Open project in VS Code
+code ~/research_projects/hep_project
+
+# Ensure VS Code Python extension is installed
+# Select Conda environment in VS Code:
+# Command Palette -> Python: Select Interpreter -> choose 'research'
+
+# Optional: Install GitLens extension for Git integration
+
+# Optional: Install tmux or screen for running long scripts on remote servers
+sudo apt install tmux
+# OR
+sudo apt install screen
+
+---
+
+3️⃣ Git Workflow
+----------------
+# Configure Git (one-time)
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+
+# Initial setup if folder not linked to GitHub
+git init
+git remote add origin <your_github_repo_url>
+
+# Daily workflow
+git pull --rebase origin main   # Pull latest changes
+git status                      # Check changes
+git add <file1> <file2>         # Stage files
+git commit -m "Descriptive message"  # Commit changes
+git push origin main             # Push to GitHub
+
+# Useful Git commands
+git log --oneline
+git fetch origin
+git branch -d <branch_name>
+git checkout -b <new_branch_name>
+
+---
+
+4️⃣ Notes
+---------
+- Conda environments isolate Python versions and packages. Multiple environments can exist independently.
+- VS Code uses the environment you select as the Python interpreter.
+- Git pull updates your local files; VS Code reflects changes automatically.
+- Always pull before pushing to avoid conflicts.
+- For long-running scripts on servers, tmux/screen keeps them running if disconnected.
+
+===========================
+End of Cheat Sheet
+===========================
+
