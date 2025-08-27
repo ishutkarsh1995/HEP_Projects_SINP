@@ -1,0 +1,73 @@
+===========================
+HEP Project Quick Reference
+===========================
+
+1️⃣ Conda Env
+--------------
+# Create env
+conda create -n research python=3.10 -y
+# Activate / deactivate
+conda activate research
+conda deactivate
+# List envs
+conda env list
+# Install packages
+conda install -c conda-forge numpy scipy pandas matplotlib seaborn sympy h5py numba cython multiprocess tqdm jupyterlab notebook ipykernel nb_conda_kernels plotly bokeh holoviews astropy uncertainties symengine requests python-dateutil pytz scikit-learn -y
+# PyTorch CPU
+conda install pytorch torchvision torchaudio cpuonly -c pytorch -y
+# PyTorch GPU (if CUDA)
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
+# Test imports
+python -c "import torch, numpy, scipy, pandas, matplotlib, sympy; print('All OK')"
+
+---
+
+2️⃣ VS Code
+-----------
+# Open project
+code ~/research_projects/hep_project
+# Select interpreter: Command Palette -> Python: Select Interpreter -> 'research'
+# Optional: GitLens extension
+# Optional: tmux / screen
+sudo apt install tmux
+sudo apt install screen
+
+---
+
+3️⃣ Git
+-------
+# Configure (once)
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+# Initial link to repo
+git init
+git remote add origin <repo_url>
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+# Daily workflow
+git pull --rebase origin main
+git status
+git add <files>
+git commit -m "Message"
+git push origin main
+
+# Quick commands
+git log --oneline
+git branch -d <branch>
+git checkout -b <branch>
+
+---
+
+4️⃣ Notes
+---------
+- Conda env = isolated Python + packages
+- VS Code uses selected interpreter
+- Always pull before push
+- tmux/screen = run long scripts remotely
+
+===========================
+End of Quick Reference
+===========================
+
