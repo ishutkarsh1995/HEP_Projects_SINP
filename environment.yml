@@ -1,0 +1,50 @@
+name: research
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  # Python
+  - python=3.10
+
+  # PyTorch CPU
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+
+  # Core scientific libraries
+  - numpy
+  - scipy
+  - pandas
+  - sympy
+  - matplotlib
+  - seaborn
+  - h5py
+  - numba
+  - cython
+  - multiprocess
+  - tqdm
+
+  # Jupyter ecosystem
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - nb_conda_kernels
+
+  # Plotting enhancements
+  - plotly
+  - bokeh
+  - holoviews
+
+  # Astronomy / physics
+  - astropy
+  - uncertainties
+  - symengine
+
+  # Utilities
+  - requests
+  - python-dateutil
+  - pytz
+  - scikit-learn
+
